@@ -24,11 +24,14 @@ function findUser() {
 
 function validateUser(data) {
     let d = data[0];
+    sessionStorage.setItem('userId', d.id);
     if (d == undefined) {
         alert('Invalid username or password');
     } else {
         if (d.username === username.value && d.password === password.value) {
-            alert("Successfully logged in");
+            let userId = sessionStorage.getItem('userId');
+            alert("Successfully logged in!");
+            window.location.href = "./home.html";
         }
     }
 }
