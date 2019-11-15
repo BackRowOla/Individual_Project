@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    $('#daysCarousel1').carousel({
+    $('#daysCarousel').carousel({
+        interval: 10000
+    });
+
+    $('#daysCarousel2').carousel({
         interval: 10000
     });
 
