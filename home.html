@@ -4,44 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row mx-auto my-auto">
+            <div id="weekly-list" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
 
-    <div>
-        <h4>This Week</h4>
-        <div>
-            <!-- placeholder  -->
-            <ul> 
-                <li>Monday:</li>
-                <li>Tuesday:</li>
-                <li>Wednesday:</li>
-                <li>Thursday:</li>
-                <li>Friday:</li>
-            </ul>
-        </div>
-        <h4>Next Week</h4>
-        <div>
-            <ul>
-                <li>Monday:</li>
-                <li>Tuesday:</li>
-                <li>Wednesday:</li>
-                <li>Thursday:</li>
-                <li>Friday:</li>
-            </ul>
-        </div>
+                <div class="container-fluid">
+                    <h4>This Week</h4>
 
+                    <!-- attempting to implement carousel -->
+                    <div class="row mx-auto my-auto">
+                        <div id="daysCarousel" class="carousel slide w-100" data-ride="carousel">
+                            <div class="carousel-inner w-100" role="listbox">
+
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Monday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Tuesday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Wednesday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Thursday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Friday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Saturday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Sunday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="carousel-control-prev w-auto" href="#daysCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next w-auto" href="#daysCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <div class="container-fluid">
+                    <h4>Next Week</h4>
+
+                    <div class="row mx-auto my-auto">
+                        <div id="daysCarousel" class="carousel slide w-100" data-ride="carousel">
+                            <div class="carousel-inner w-100" role="listbox">
+
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Monday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Tuesday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Wednesday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Thursday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Friday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Saturday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Sunday
+                                            </div>
+                                            <div class="card-body">
+                                                Breakfast:
+                                                <br> Lunch:
+                                                <br> Dinner:
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="carousel-control-prev w-auto" href="#daysCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next w-auto" href="#daysCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="d-none d-xl-block col-xl-2 bd-toc border-left">
+                <h4>Food List</h4>
+                <div id="food-list" class="card p-2">
+                    Breakfast: <br> Lunch: <br> Dinner:
+                    <button class="btn btn-outline-primary w-75 mx-auto">Add Recipe</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <h4>Food List</h4>
-        <div class="card">
-            list
-        </div>
-    </div>
-
+    <script src="./Scripts/home.js"></script>
 </body>
 
 </html>
