@@ -6,10 +6,10 @@ document.getElementById('btnSignIn').addEventListener('click', (event) => valida
 function validateInput() {
     console.log(username.value);
     // trying to validate users
-    if (username.value == ""){
+    if (username.value == "") {
         console.log("about to append alert")
         username.appendChild(createAlert('alert alert-primary'));
-    }else{
+    } else {
         findUser()
     }
 }
@@ -33,8 +33,8 @@ function validateUser(data) {
     }
 }
 
-function createAlert(alertType, content){
-let myEl = document.createElement('div');
-myEl.classname = alertType;
-myEl.setAttribute('role', 'alert');
+function createAlert(alertType, content) {
+    let myEl = document.createElement('div');
+    myEl.classname = alertType;
+    myEl.setAttribute('role', 'alert');
 }

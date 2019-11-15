@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('users', {
-        username: {
+    return sequelize.define('recipes', {
+        name: {
             type: DataTypes.STRING
         },
-        email: {
+        cooking_length: {
             type: DataTypes.STRING
         },
-        password: {
+        cooking_method: {
             type: DataTypes.STRING
         }
     }, { timestamps: false });
