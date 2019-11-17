@@ -25,4 +25,4 @@ $(document).ready(function() {
     });
 });
 
-alert("The currently logged in users ID:" + sessionStorage.getItem('userId'));
+// alert("The currently logged in users ID:" + sessionStorage.getItem('userId'));
