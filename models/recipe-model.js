@@ -6,6 +6,12 @@ module.exports = (sequelize, DataTypes) => {
         cooking_length: {
             type: DataTypes.STRING
         },
+        meal_period: {
+            type: DataTypes.STRING
+        },
+        ingredients: {
+            type: DataTypes.STRING
+        },
         cooking_method: {
             type: DataTypes.STRING
         },

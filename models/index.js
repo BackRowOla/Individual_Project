@@ -18,8 +18,8 @@ const Recipe = sequelize.import(__dirname + '/recipe-model');
 Recipe.belongsTo(User);
 User.hasMany(Recipe);
 
-// sequelize.sync({ force: true });
-sequelize.sync();
+sequelize.sync({ force: true });
+// sequelize.sync();
 
 module.exports = {
     User,

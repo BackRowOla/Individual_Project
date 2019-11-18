@@ -25,4 +25,16 @@ $(document).ready(function() {
     });
 });
 
+getRecipes();
+
+function getRecipes() {
+    fetch('http://localhost:8080/recipe/id=' + sessionStorage.getItem('userId'))
+        .then(res => res.json())
+        .then(json => console.log(json))
+        .catch(err => console.error(err));
+    console.log('show something');
+}
+
+document.getElementById('btnAddRecipe').addEventListener('click', (event) => window.location.href = "./add-recipe.html");
+
 // alert("The currently logged in users ID:" + sessionStorage.getItem('userId'));
