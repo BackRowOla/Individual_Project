@@ -14,9 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         },
         cooking_method: {
             type: DataTypes.STRING
-        },
-        meal_period: {
-            type: DataTypes.STRING
         }
     }, { timestamps: false });
 }
