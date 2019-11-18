@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(149, 199, 182);
+    background-color: rgb(106, 190, 179);
 }
 
 @media (max-width: 768px) {
@@ -34,4 +34,9 @@ body {
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left {
     transform: translateX(0);
+}
+
+.weekBackground{
+    padding: 18px;
+    background: white;
 }

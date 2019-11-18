@@ -28,13 +28,31 @@ $(document).ready(function() {
 getRecipes();
 
 function getRecipes() {
-    fetch('http://localhost:8080/recipe/id=' + sessionStorage.getItem('userId'))
+    fetch('http://localhost:8080/recipe/' + sessionStorage.getItem('userId'))
         .then(res => res.json())
-        .then(json => console.log(json))
+        .then(json => listUserRecipes(json))
         .catch(err => console.error(err));
-    console.log('show something');
+    console.log('show a thing');
 }
 
 document.getElementById('btnAddRecipe').addEventListener('click', (event) => window.location.href = "./add-recipe.html");
+document.getElementById('btnSignOut').addEventListener('click', (event) => signUserOut());
 
-// alert("The currently logged in users ID:" + sessionStorage.getItem('userId'));
+function listUserRecipes(data){
+    console.log(data);
+    data.map(recipe => {
+        console.log(recipe.name);
+        constructElement('p', recipe.name);
+    });
+}
+
+function constructElement(element, content){
+    let myEl = document.createElement(element);
+    myEl.innerText = content;
+    document.getElementById('food-list').appendChild(myEl);
+}
+
+function signUserOut(){
+    sessionStorage.clear();
+    window.location.href = "./index.html"
+}
