@@ -2,6 +2,11 @@ const express = require('express');
 const models = require('../models');
 const router = express.Router();
 
+router.get('/all', async (req, res) => {
+    const result = await models.User.findAll();
+    res.send(result);
+});
+
 router.get('/findUser/:user', async (req, res) => {
     const result = await models.User.findAll({
         where: {

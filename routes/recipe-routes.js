@@ -9,6 +9,15 @@ router.get('/all', async(req, res) => {
 router.get('/:id', async(req, res) => {
     const result = await models.Recipe.findAll({
         where: {
+            id: req.params.id
+        }
+    });
+    res.send(result);
+});
+
+router.get('/user/:id', async(req, res) => {
+    const result = await models.Recipe.findAll({
+        where: {
             userId: req.params.id
         }
     });
@@ -21,7 +30,7 @@ router.get('/get/:meal_period', async(req, res) => {
         where: {
             meal_period: req.params.meal_period
         }
-    })
+    });
     res.send(result);
 });
 
@@ -37,4 +46,12 @@ router.post('/add', async(req, res) => {
     res.status(201).send('Recipe added successfully');
 });
 
+router.delete('/delete', async(req, res) => {
+    await models.Recipe.destroy({
+        where: {
+            id: req.body.id
+        }
+    });
+    res.send('Recipe deleted');
+});
 module.exports = router;
