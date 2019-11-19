@@ -15,6 +15,16 @@ router.get('/:id', async(req, res) => {
     res.send(result);
 });
 
+router.get('/get/:meal_period', async(req, res) => {
+    const result = await models.Recipe.findAll({
+        attributes: ['id', 'name'],
+        where: {
+            meal_period: req.params.meal_period
+        }
+    })
+    res.send(result);
+});
+
 router.post('/add', async(req, res) => {
     await models.Recipe.create({
         name: req.body.name,
@@ -22,7 +32,7 @@ router.post('/add', async(req, res) => {
         meal_period: req.body.meal_period,
         ingredients: req.body.ingredients,
         cooking_method: req.body.cooking_method,
-        userId: req.body.userId 
+        userId: req.body.userId
     });
     res.status(201).send('Recipe added successfully');
 });

@@ -27,6 +27,9 @@ $(document).ready(function() {
 
 getRecipes();
 
+document.getElementById('btnAddRecipe').addEventListener('click', (event) => window.location.href = "./add-recipe.html");
+document.getElementById('btnSignOut').addEventListener('click', (event) => signUserOut());
+
 function getRecipes() {
     fetch('http://localhost:8080/recipe/' + sessionStorage.getItem('userId'))
         .then(res => res.json())
@@ -35,10 +38,7 @@ function getRecipes() {
     console.log('show a thing');
 }
 
-document.getElementById('btnAddRecipe').addEventListener('click', (event) => window.location.href = "./add-recipe.html");
-document.getElementById('btnSignOut').addEventListener('click', (event) => signUserOut());
-
-function listUserRecipes(data){
+function listUserRecipes(data) {
     console.log(data);
     data.map(recipe => {
         console.log(recipe.name);
@@ -46,13 +46,13 @@ function listUserRecipes(data){
     });
 }
 
-function constructElement(element, content){
+function constructElement(element, content) {
     let myEl = document.createElement(element);
     myEl.innerText = content;
     document.getElementById('food-list').appendChild(myEl);
 }
 
-function signUserOut(){
+function signUserOut() {
     sessionStorage.clear();
     window.location.href = "./index.html"
 }
