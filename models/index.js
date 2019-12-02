@@ -11,13 +11,14 @@ const sequelize = new Sequelize(
 
 const User = sequelize.import(__dirname + '/user-model');
 const Recipe = sequelize.import(__dirname + '/recipe-model');
-// const weekPlan = sequelize.import(__dirname + '/weekPlan-model');
+const dayPlan = sequelize.import(__dirname + '/day-plan-model');
 
 // Association
 
 //one to many
 User.hasMany(Recipe);
 Recipe.belongsTo(User);
+
 
 // sequelize.sync({ force: true }).then(() => {
 //     User.create({ username: 'admin', email: 'admin@gmail.com', password: 'admin' });
