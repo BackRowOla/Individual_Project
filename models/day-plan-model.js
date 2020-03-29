@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
         date: {
             type: DataTypes.DATEONLY
         },
-    });
+    }, { timestamps: false });
 }
 
 // probably not how this should work... re-vist this and re-think it ALL!

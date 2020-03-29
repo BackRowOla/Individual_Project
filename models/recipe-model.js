@@ -15,5 +15,5 @@ module.exports = (sequelize, DataTypes) => {
         cooking_method: {
             type: DataTypes.STRING
         }
-    }, { timestamps: false });
+    }, { underscored: true, timestamps: false });
 }

@@ -9,5 +9,5 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.STRING
         }
-    }, { timestamps: false });
+    }, { underscored: true, timestamps: false });
 }
